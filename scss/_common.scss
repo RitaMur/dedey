@@ -1,0 +1,19 @@
+@font-face{
+  font-family: 'AvenirNextCyr';
+  src: url("../css/fonts/AvenirNextCyr-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url("../css/fonts/FiraSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url("../css/fonts/ProximaNova-Regular.ttf");
+}
+
+body{
+  font-family: $font-main !important;
+}
+

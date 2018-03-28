@@ -1,0 +1,62 @@
+.articles {
+  background-image: url("../imgs/articles-bg.png");
+
+  &_title-container {
+    @extend .popular-bases-container_title-container;
+    margin: 60px auto;
+
+    & h3 {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+  }
+
+  &_thumbnail {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+
+    &_pic {
+      background-image: url("../imgs/base-pic.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 8px 0 0 8px;
+    }
+
+    &_article-name {
+      font-size: 19pt;
+      color: $title-color;
+      margin: 15px 0;
+    }
+
+    &_article-date {
+      font-size: 14pt;
+      color: $title-color;
+      margin: 15px 0;
+
+      & span {
+        color: $orange;
+      }
+    }
+
+    &_article-text {
+      font-size: 14pt;
+      margin: 15px 0;
+    }
+
+    &_link {
+      font-size: 15pt;
+      color: $title-color;
+      float: right;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+  }
+
+  &_all-articles-button {
+    @extend .popular-bases-container_show-all-button;
+    margin: 45px auto 60px;
+  }
+}

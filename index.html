@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/ico"/>
+    <link rel="stylesheet" href="scss/helpers/_flexboxgrid.scss">
+    <link rel="stylesheet" href="libs/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script type="text/javascript" src="libs/fontawesome-free-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="top-container">
+        <header class="row">
+            <div class="logo col-md-4">
+                <img src="imgs/logo.png" alt="" class="logo_img">
+            </div>
+
+            <div class="nav-bar col-md-4">
+                <a href="#" class="nav-bar_element">О нас</a>
+                <a href="#" class="nav-bar_element">Статьи</a>
+                <a href="#" class="nav-bar_element">Новости</a>
+                <a href="#" class="nav-bar_element">Отзывы</a>
+            </div>
+
+            <div class="auth-block col-md-4">
+                <div class="row">
+                    <div class="dropdown col-md-3">
+                        <p class="dropdown_button">рус <i class="fa fa-caret-down"></i></p>
+                        <div class="dropdown_content">
+                            <a href="#">рус</a>
+                            <a href="#">укр</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown col-md-3">
+                        <p class="dropdown_button">₴ <i class="fa fa-caret-down"></i></p>
+                        <div class="dropdown_content">
+                            <a href="#">₽</a>
+                            <a href="#">₴</a>
+                        </div>
+                    </div>
+
+                    <div class="login col-md-3">
+                        <a href="#">Вход</a>
+                    </div>
+
+                    <div class="registration col-md-3">
+                        <a href="#" class="registration_dropdown_button">Регистрация</a>
+                        <div class="registration_dropdown_content">
+                            <p class="registration_dropdown_content_title">Регистрация</p>
+                            <input type="email" name="email" class="registration_dropdown_content_email"
+                                   placeholder="Ваш e-mail">
+                            <input type="password" name="password" class="registration_dropdown_content_password"
+                                   placeholder="Ваш пароль">
+                            <button class="registration_dropdown_content_btn">найти</button>
+                            <p class="registration_dropdown_content_or">или</p>
+                            <div class="registration_dropdown_content_socail-enter"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="headline col-md-offset-3 col-md-6 col-md-offset-3">
+                <h3>Ваш <span>отдых</span></h3>
+                <h1>В затоке</h1>
+                <h4>Бронируйте лучшие отели и курортные базы в затоке</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="search-container col-md-offset-2 col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="search-container_find-place col-md-3">
+                        <p>Место или название отеля</p>
+                        <div class="come-together">
+                            <img src="imgs/map-marker.png" alt="">
+                            <select>
+                                <option value="">test1</option>
+                                <option value="">test2</option>
+                                <option value="">test3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-container_date-container col-md-4">
+                        <div class="row">
+                            <div class="search-container_in-date col-md-6">
+                                <p>Заезд</p>
+                                <div class="come-together">
+                                    <img src="imgs/calendar.png" alt="">
+                                    <input type="text" class="in-date">
+                                </div>
+                            </div>
+
+                            <div class="search-container_out-date col-md-6">
+                                <p>Выезд</p>
+                                <div class="come-together">
+                                    <input type="text" class="out-date">
+                                    <img src="imgs/arrow-down.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-container_add-container col-md-5">
+                        <div class="row">
+                            <div class="search-container_add-container_inputs col-md-6">
+                                <div class="search-container_add-container_number-input">
+                                    <p>Номера</p>
+                                    <div class="come-together">
+                                        <input type="text" class="input1" value="0">
+                                        <div class="search-container_add-container_number-inputs_arrows">
+                                            <i class="fas fa-sort-up  click up" onclick="inc1()"></i>
+                                            <i class="fas fa-sort-down click down" onclick="inc1()"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-container_add-container_number-input">
+                                    <p>Взрослые</p>
+                                    <div class="come-together">
+                                        <input type="text" class="input2" value="0">
+                                        <div class="search-container_add-container_number-inputs_arrows">
+                                            <i class="fas fa-sort-up  click up" onclick="inc2()"></i>
+                                            <i class="fas fa-sort-down click down" onclick="inc2()"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-container_add-container_number-input">
+                                    <p>Дети</p>
+                                    <div class="come-together">
+                                        <input type="text" class="input3" value="0">
+                                        <div class="search-container_add-container_number-inputs_arrows">
+                                            <i class="fas fa-sort-up  click up" onclick="inc3()"></i>
+                                            <i class="fas fa-sort-down click down" onclick="inc3()"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-container_add-container_plus-button col-md-1">
+                                <i class="fa fa-plus-circle"></i>
+                            </div>
+                            <div class="search-container_add-container_find-button col-md-5">
+                                <button>Найти</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bases-slider">
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+
+            <div class="bases-slider_thumbnail">
+                <div class="bases-slider_thumbnail_info">
+                    <p>Черная жемчужина</p>
+                    <p class="bases-slider_thumbnail_info_base-location">
+                        <img src="imgs/map-marker.png" alt="">Затока</p>
+                    <img src="imgs/star-rating.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popular-bases-container">
+        <div class="row">
+            <div class="popular-bases-container_title-container col-md-offset-4 col-md-4 col-md-offset-4">
+                <h3>Популярные турбазы</h3>
+                <div class="divider">
+                    <img src="imgs/line.png" alt="">
+                    <img src="imgs/stars.png" alt="">
+                    <img src="imgs/line.png" alt="">
+                </div>
+                <p>Лучший выбор отели в затоке</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+                <div class="row popular-bases-container_thumbnails-container">
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row popular-bases-container_thumbnails-container">
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="popular-bases-container_base-thumbnail">
+                            <div class="popular-bases-container_base-thumbnail_base-pic"></div>
+                            <div class="popular-bases-container_base-thumbnail_info">
+                                <p>Черная жемчужина</p>
+                                <p class="popular-bases-container_base-thumbnail_info_base-location">
+                                    <img src="imgs/map-marker.png" alt="">Затока</p>
+                                <img src="imgs/star-rating.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="popular-bases-container_show-all-button">
+                <a href="#">Показать все</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="row">
+            <div class="comments_title-container col-md-offset-4 col-md-4 col-md-offset-4">
+                <h3>Последние отзывы</h3>
+                <div class="divider">
+                    <img src="imgs/line.png" alt="">
+                    <img src="imgs/comments.png" alt="">
+                    <img src="imgs/line.png" alt="">
+                </div>
+                <p>узнайте что о нас говорят</p>
+            </div>
+
+            <div class="comments_slider col-md-offset-3 col-md-6 col-md-offset-3">
+                <div class="row">
+                    <div class="comments_slider_client-pic col-md-4">
+                        <img src="imgs/client-pic.png" alt="">
+                    </div>
+                    <div class="comments_slider_text col-md-8">
+                        <p class="comments_slider_text_client-name">Мария Теремкова</p>
+                        <p class="comments_slider_text_client-job">Телеведущая</p>
+                        <img src="imgs/short-line.png" alt="">
+                        <p class="comments_slider_text_comment">Сайт рыбатекст поможет дизайнеру, верстальщику,
+                            вебмастеру сгенерировать несколько
+                            абзацев
+                            более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
+                            навык
+                            публичных выступлений в домашних условиях. При создании генератора мы использовали
+                            небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от
+                            двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и
+                            живым для визуально-слухового восприятия.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="comments_slider_client-pic col-md-4">
+                        <img src="imgs/client-pic.png" alt="">
+                    </div>
+                    <div class="comments_slider_text col-md-8">
+                        <p class="comments_slider_text_client-name">Мария Теремкова</p>
+                        <p class="comments_slider_text_client-job">Телеведущая</p>
+                        <img src="imgs/short-line.png" alt="">
+                        <p class="comments_slider_text_comment">Сайт рыбатекст поможет дизайнеру, верстальщику,
+                            вебмастеру сгенерировать несколько
+                            абзацев
+                            более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
+                            навык
+                            публичных выступлений в домашних условиях. При создании генератора мы использовали
+                            небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от
+                            двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и
+                            живым для визуально-слухового восприятия.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="comments_slider_client-pic col-md-4">
+                        <img src="imgs/client-pic.png" alt="">
+                    </div>
+                    <div class="comments_slider_text col-md-8">
+                        <p class="comments_slider_text_client-name">Мария Теремкова</p>
+                        <p class="comments_slider_text_client-job">Телеведущая</p>
+                        <img src="imgs/short-line.png" alt="">
+                        <p class="comments_slider_text_comment">Сайт рыбатекст поможет дизайнеру, верстальщику,
+                            вебмастеру сгенерировать несколько
+                            абзацев
+                            более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить
+                            навык
+                            публичных выступлений в домашних условиях. При создании генератора мы использовали
+                            небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от
+                            двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и
+                            живым для визуально-слухового восприятия.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="articles">
+        <div class="row">
+            <div class="articles_title-container col-md-offset-4 col-md-4 col-md-offset-4">
+                <h3>Интересные статьи</h3>
+                <p>Интересные статьи нашего портала</p>
+            </div>
+
+            <div class="articles_thumbnails-container row col-md-offset-2 col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row articles_thumbnail">
+                            <div class="articles_thumbnail_pic col-md-6"></div>
+                            <div class="articles_thumbnail_content col-md-6">
+                                <p class="articles_thumbnail_article-name">Открытие турбазы</p>
+                                <p class="articles_thumbnail_article-date"><span>22.04.</span>2017 </p>
+                                <p class="articles_thumbnail_article-text">Сайт рыбатекст поможет дизайнеру,
+                                    верстальщику, вебмастеру сгенерировать несколько
+                                    абзацев
+                                    более менее осмысленного текста рыбы на русском языке...</p>
+                                <a href="#" class="articles_thumbnail_link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row articles_thumbnail">
+                            <div class="articles_thumbnail_pic col-md-6"></div>
+                            <div class="articles_thumbnail_content col-md-6">
+                                <p class="articles_thumbnail_article-name">Открытие турбазы</p>
+                                <p class="articles_thumbnail_article-date"><span>22.04.</span>2017 </p>
+                                <p class="articles_thumbnail_article-text">Сайт рыбатекст поможет дизайнеру,
+                                    верстальщику, вебмастеру сгенерировать несколько
+                                    абзацев
+                                    более менее осмысленного текста рыбы на русском языке...</p>
+                                <a href="#" class="articles_thumbnail_link">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="articles_all-articles-button">
+                    <a href="#">все статьи</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="footer col-md-offset-2 col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 col-md-offset-1">
+                        <div class="row footer_find-container">
+                            <div class="footer_find-container_title">
+                                <p>Я хочу найти турбазу/отель</p>
+                            </div>
+                            <div class="footer_find-container_search-bar">
+                                <input type="text">
+                                <button>Найти</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="footer_nav-bar col-md-7">
+                        <a href="#">Новости</a>
+                        <a href="#">Отзывы</a>
+                        <a href="#">О нас</a>
+                        <a href="#">Статьи</a>
+                        <a href="#">Новости</a>
+                    </div>
+
+                    <div class="footer_social col-md-offset-1 col-md-4">
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-odnoklassniki"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
